@@ -28,7 +28,8 @@ import java.util.List;
 /**
  * UmsAdminService实现类
  * @author Appleye
- * @time 2019/8/1 0001 14:22
+ * @date 2019/8/1 0001
+ * @time 14:22
  */
 @Service
 public class UmsAdminServiceImpl implements UmsAdminService {
