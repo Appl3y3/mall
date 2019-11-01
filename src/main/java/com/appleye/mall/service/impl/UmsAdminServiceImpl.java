@@ -35,23 +35,26 @@ public class UmsAdminServiceImpl implements UmsAdminService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UmsAdminServiceImpl.class);
 
-    @Autowired
     private UserDetailsService userDetailsService;
-
-    @Autowired
     private JwtTokenUtil jwtTokenUtil;
+    private PasswordEncoder passwordEncoder;
+    private UmsAdminMapper adminMapper;
+    private UmsAdminRoleRelationDao adminRoleRelationDao;
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    private UmsAdminServiceImpl (UserDetailsService userDetailsService,
+                                 JwtTokenUtil jwtTokenUtil,
+                                 PasswordEncoder passwordEncoder,
+                                 UmsAdminMapper adminMapper,
+                                 UmsAdminRoleRelationDao adminRoleRelationDao) {
+        this.userDetailsService = userDetailsService;
+        this.jwtTokenUtil = jwtTokenUtil;
+        this.passwordEncoder = passwordEncoder;
+        this.adminRoleRelationDao = adminRoleRelationDao;
+    }
 
     @Value("${jwt.tokenHead}")
     private String tokenHead;
-
-    @Autowired
-    private UmsAdminMapper adminMapper;
-
-    @Autowired
-    private UmsAdminRoleRelationDao adminRoleRelationDao;
 
     @Override
     public UmsAdmin getAdminByUsername(String username) {
