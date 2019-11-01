@@ -51,6 +51,7 @@ public class UmsAdminServiceImpl implements UmsAdminService {
         this.userDetailsService = userDetailsService;
         this.jwtTokenUtil = jwtTokenUtil;
         this.passwordEncoder = passwordEncoder;
+        this.adminMapper = adminMapper;
         this.adminRoleRelationDao = adminRoleRelationDao;
     }
 
