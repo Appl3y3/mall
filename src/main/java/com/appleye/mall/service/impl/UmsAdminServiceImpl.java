@@ -5,7 +5,6 @@ import com.appleye.mall.dao.UmsAdminRoleRelationDao;
 import com.appleye.mall.mbg.mapper.UmsAdminMapper;
 import com.appleye.mall.mbg.model.UmsAdmin;
 import com.appleye.mall.mbg.model.UmsAdminExample;
-import com.appleye.mall.mbg.model.UmsAdminRoleRelation;
 import com.appleye.mall.mbg.model.UmsPermission;
 import com.appleye.mall.service.UmsAdminService;
 import org.slf4j.Logger;
@@ -19,16 +18,12 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.stereotype.Service;
-import org.springframework.web.util.UrlPathHelper;
-import sun.plugin.liveconnect.SecurityContextHelper;
+
 
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.ScheduledExecutorService;
 
 /**
  * UmsAdminService实现类
