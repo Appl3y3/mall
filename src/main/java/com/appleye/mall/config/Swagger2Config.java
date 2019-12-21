@@ -4,6 +4,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.core.context.SecurityContextHolder;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -20,11 +21,16 @@ import java.util.List;
 /**
  * Swagger2API文档的配置
  * @author Appleye
- * @time 2019/7/31 0031 14:38
+ * @date 2019/7/31 0031
+ * @time 14:38
  */
 @Configuration
 @EnableSwagger2
+//@Profile({"dev","test"}) //Swagger2只在开发/测试环境中使用
 public class Swagger2Config {
+
+    private final static Contact contact = new Contact("Appleye", null, "13041238986@163.com");
+
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -47,7 +53,8 @@ public class Swagger2Config {
         return new ApiInfoBuilder()
                 .title("SwaggerUI演示")
                 .description("mall")
-                .contact("appleye")
+                .contact(contact)
+//                .contact("Appleye")
                 .version("1.0")
                 .build();
     }
