@@ -51,6 +51,11 @@ PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
             <generatedKey column="id" sqlStatement="MySql" identity="true"/>
         </table>
 
+        <!-- 商品评论表 -->
+        <table tableName="pms_comment">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
         <!--后台用户表-->
         <table tableName="ums_admin">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>

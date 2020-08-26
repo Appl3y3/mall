@@ -41,7 +41,10 @@ public class SignUtil {
 
         content = null;
         // 将 sha1 加密后的字符串可与 signature 对比，标识该请求来源于微信
-        return tmpStr != null ? tmpStr.equals(signature.toUpperCase()) : false;
+//        return tmpStr != null ? tmpStr.equals(signature.toUpperCase()) : false;
+
+        //idea提示简化上面的代码
+        return (tmpStr != null) && (tmpStr.equals(signature.toUpperCase()));
     }
 
     /**

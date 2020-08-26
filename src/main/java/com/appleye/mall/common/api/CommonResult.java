@@ -29,7 +29,7 @@ public class CommonResult<T> {
      * @return
      */
     public static <T> CommonResult<T> success(T data){
-        return new CommonResult<T>(ResultCode.SCCESS.getCode(), ResultCode.SCCESS.getMessage(), data);
+        return new CommonResult<T>(ResultCode.SUCCESS.getCode(), ResultCode.SUCCESS.getMessage(), data);
     }
 
     /**
@@ -40,7 +40,7 @@ public class CommonResult<T> {
      * @return
      */
     public static <T> CommonResult<T> success(T data, String message) {
-        return new CommonResult<T>(ResultCode.SCCESS.getCode(), message, data);
+        return new CommonResult<T>(ResultCode.SUCCESS.getCode(), message, data);
     }
 
     /**
